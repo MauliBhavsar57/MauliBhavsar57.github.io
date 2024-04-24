@@ -17,8 +17,8 @@ Here, the container with name mongo-express is made to connect the MongoDB Datab
 Now, open the link in your browser localhost:8081 and create two databases my-db and user-accounts
 ![6](https://github.com/MauliBhavsar57/MauliBhavsar57.github.io/assets/109329874/64ac4096-3459-4214-aec1-7a891fee4883) <br>
 Creating these two databases is necessary as the Frontend will be requiring these while running. Also, we need to change the MongoDB URL mentioned in the server.js file as we will be running MongoDB using Docker instead of Local Machine.<br>
-Naviagate to the server.js file in the project and replace mongoUrlLocal and mongoUrlDocker with the fol!lowing value 
-(https://github.com/MauliBhavsar57/MauliBhavsar57.github.io/assets/109329874/c5adc491-1572-4c15-9226-2b396ebd1d2b)
+Naviagate to the server.js file in the project and replace mongoUrlLocal and mongoUrlDocker with the following value 
+![14](https://github.com/MauliBhavsar57/MauliBhavsar57.github.io/assets/109329874/9bcd216f-6e74-4cc3-99a4-8c95f0af2dcd)
 <br>
 create a new Dockerfile inside the app folder of the project with the following commands <br>
 FROM node WORKDIR /app COPY . . ENV MONGO_DB_USERNAME=admin ENV MONGO_DB_PWD=password RUN npm install EXPOSE 3000 CMD ["node", "server.js"] 
